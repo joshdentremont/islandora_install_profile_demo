@@ -211,15 +211,6 @@ display:
           admin_label: 'field_model: Taxonomy term'
           plugin_id: standard
           required: false
-        field_resource_type:
-          id: field_resource_type
-          table: node__field_resource_type
-          field: field_resource_type
-          relationship: none
-          group_type: group
-          admin_label: 'field_resource_type: Taxonomy term'
-          plugin_id: standard
-          required: false
       header: {  }
       footer:
         area_text_custom:
@@ -307,7 +298,7 @@ display:
           id: field_external_uri_uri
           table: taxonomy_term__field_external_uri
           field: field_external_uri_uri
-          relationship: field_resource_type
+          relationship: field_model
           group_type: group
           admin_label: ''
           plugin_id: string
@@ -348,29 +339,10 @@ display:
           1: AND
       defaults:
         title: false
-        relationships: false
+        relationships: true
         filters: false
         filter_groups: false
         footer: false
-      relationships:
-        field_model:
-          id: field_model
-          table: node__field_model
-          field: field_model
-          relationship: none
-          group_type: group
-          admin_label: 'field_model: Taxonomy term'
-          plugin_id: standard
-          required: false
-        field_resource_type:
-          id: field_resource_type
-          table: node__field_resource_type
-          field: field_resource_type
-          relationship: none
-          group_type: group
-          admin_label: 'field_resource_type: Taxonomy term'
-          plugin_id: standard
-          required: false
       footer:
         area_text_custom:
           id: area_text_custom
@@ -436,3 +408,4 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags: {  }
+

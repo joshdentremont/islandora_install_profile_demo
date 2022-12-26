@@ -2,6 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - views.view.members
     - views.view.solr_search_content
   module:
     - islandora
@@ -56,7 +57,7 @@ reactions:
         third_party_settings:
           block_class:
             classes: ''
-    include_default_blocks: 0
+    include_default_blocks: 1
     saved: false
   view_mode_alter:
     id: view_mode_alter
